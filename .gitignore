@@ -1,0 +1,7 @@
+# ignore installed dependencies
+package-lock.json
+node_modules/
+# ignore tslint rules
+tslint.json
+# ignore .env file (where API credentials will be stored)
+.env
