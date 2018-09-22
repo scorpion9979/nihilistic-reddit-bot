@@ -17,7 +17,7 @@ const client = new Snoostorm(r);
 // configuring streaming options
 const streamOpts = {
     subreddit: "all",
-    results: process.env.RESULTS
+    results: parseInt(process.env.RESULTS, 10)
 };
 
 // create comment stream with given options
