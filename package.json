@@ -1,7 +1,7 @@
 {
   "name": "reddit-bot",
   "version": "1.0.0",
-  "description": "A reddit bot",
+  "description": "A reddit bot that replies to negative comments with cheerfull nihilism",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
