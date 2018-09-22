@@ -28,8 +28,8 @@ const sentiment = new Sentiment();
 
 // perform callback for every comment
 comments.on("comment", (comment) => {
-    let metricThreshold = -20;
-    let wordCountThreshold = 50;
+    let metricThreshold = process.env.METRIC_THRESHOLD;
+    let wordCountThreshold = process.env.WORD_COUNT_THRESHOLD;
     let result = sentiment.analyze(comment.body);
     let metric = result.score + result.comparative;
     let wordCount = result.tokens.length;
@@ -38,7 +38,7 @@ comments.on("comment", (comment) => {
         let reply = replies[randomIndex];
         console.log("Replying to: \"" + comment.body + "\"\nwith: \"" + reply + "\"");
         comment.reply(reply + "\n"
-                      + "---" + "I'm a cheerfully nihlistic bot created by /u/scorpion9979 | "
+                      + "\n---" + "I'm a cheerfully nihlistic bot created by /u/scorpion9979 | "
                       + "[source code](https://github.com/scorpion9979/nihilistic-reddit-bot)")
                .catch(function(err) {
                    console.log(err);
