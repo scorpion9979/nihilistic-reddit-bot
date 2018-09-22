@@ -1,6 +1,7 @@
 require("dotenv").config();
 const Snoowrap = require("snoowrap");
 const Snoostorm = require("snoostorm");
+const replies = require("./replies");
 
 // setting up clients
 const r = new Snoowrap({
@@ -23,5 +24,11 @@ const comments = client.CommentStream(streamOpts);
 
 // perform callback for every comment
 comments.on("comment", (comment) => {
-    console.log(comment.body);
+    if (comment.body === ":(") {
+        let randomIndex = Math.floor(Math.random() * replies.length);
+        comment.reply(replies[randomIndex])
+               .catch(function() {
+                   console.log("Rate limit reached, hang in there...");
+                });
+    }
 });
