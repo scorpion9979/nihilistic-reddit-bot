@@ -11,3 +11,17 @@ const r = new Snoowrap({
     password: process.env.REDDIT_PASS
 });
 const client = new Snoostorm(r);
+
+// configuring streaming options
+const streamOpts = {
+    subreddit: "all",
+    results: 25
+};
+
+// create comment stream with given options
+const comments = client.CommentStream(streamOpts);
+
+// perform callback for every comment
+comments.on("comment", (comment) => {
+    console.log(comment.body);
+});
