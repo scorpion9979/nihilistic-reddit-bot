@@ -23,6 +23,7 @@
   "homepage": "https://github.com/scorpion9979/reddit-bot#readme",
   "dependencies": {
     "dotenv": "^6.0.0",
+    "sentiment": "^5.0.1",
     "snoostorm": "0.0.5",
     "snoowrap": "^1.15.2"
   }
