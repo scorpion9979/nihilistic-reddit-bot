@@ -16,7 +16,7 @@ const client = new Snoostorm(r);
 
 // configuring streaming options
 const streamOpts = {
-    subreddit: "all",
+    subreddit: process.env.SUBREDDIT,
     results: parseInt(process.env.RESULTS, 10)
 };
 
