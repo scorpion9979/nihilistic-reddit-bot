@@ -38,8 +38,8 @@ comments.on("comment", (comment) => {
         let reply = replies[randomIndex];
         console.log("\nReplying to: \"" + comment.body + "\"\nwith: \"" + reply + "\"\n");
         comment.reply(reply + "\n"
-                      + "\n---\n" + "I'm a bot created by \\/u/scorpion9979 | "
-                      + "[source code](https://github.com/scorpion9979/nihilistic-reddit-bot)")
+                      + "\n" + "_I'm a bot created by \\/u/scorpion9979 | "
+                      + "[source code](https://github.com/scorpion9979/nihilistic-reddit-bot)_")
                .catch(function(err) {
                    console.log("\nCaught error: " + err.message + "\nHang tight!");
                 });
