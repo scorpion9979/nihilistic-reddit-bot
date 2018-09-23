@@ -12,10 +12,11 @@ CLIENT_ID=***
 CLIENT_SECRET=***
 REDDIT_USER=***
 REDDIT_PASS=***
+# Comment stream setting
+RESULTS=25
 # Sentiment settings
 METRIC_THRESHOLD=-15
 WORD_COUNT_THRESHOLD=80
-RESULTS=25
 ```
 
 ## Build
