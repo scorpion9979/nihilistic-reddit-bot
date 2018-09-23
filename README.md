@@ -17,6 +17,8 @@ RESULTS=25
 # Sentiment settings
 METRIC_THRESHOLD=-15
 WORD_COUNT_THRESHOLD=80
+# Subreddit(s) to stream comments from
+SUBREDDIT=subreddit1+subreddit2+...
 ```
 
 ## Build
