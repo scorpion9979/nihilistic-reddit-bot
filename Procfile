@@ -1,1 +1,1 @@
-worker: node ./dist/server.js
+worker: tsc && node ./dist/server.js
