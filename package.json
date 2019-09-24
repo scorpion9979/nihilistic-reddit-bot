@@ -2,10 +2,12 @@
   "name": "reddit-bot",
   "version": "1.0.0",
   "description": "A reddit bot that replies to negative comments with cheerfull nihilism",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/server.js",
+    "flow": "flow",
+    "build": "babel src/ -d dist/",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,5 +28,11 @@
     "sentiment": "^5.0.1",
     "snoostorm": "0.0.5",
     "snoowrap": "^1.15.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-flow": "^7.0.0",
+    "flow-bin": "^0.108.0"
   }
 }

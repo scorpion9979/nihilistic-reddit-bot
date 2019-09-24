@@ -1,7 +1,12 @@
+// @flow
 require("dotenv").config();
+// flowlint-next-line untyped-import:off
 const Snoowrap = require("snoowrap");
+// flowlint-next-line untyped-import:off
 const Snoostorm = require("snoostorm");
+// flowlint-next-line untyped-import:off
 const Sentiment = require("sentiment");
+// flowlint-next-line untyped-import:off
 const replies = require("./replies");
 
 // setting up clients
