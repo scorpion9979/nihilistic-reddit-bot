@@ -5,3 +5,5 @@ node_modules/
 tslint.json
 # ignore .env file (where API credentials will be stored)
 .env
+# ignore typescript build directory
+dist/

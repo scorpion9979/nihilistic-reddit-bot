@@ -2,9 +2,9 @@
   "name": "reddit-bot",
   "version": "1.0.0",
   "description": "A reddit bot that replies to negative comments with cheerfull nihilism",
-  "main": "server.js",
+  "main": "./dist/server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "tsc && node ./dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/scorpion9979/reddit-bot#readme",
   "dependencies": {
+    "@types/node": "^12.7.7",
     "dotenv": "^6.0.0",
     "sentiment": "^5.0.1",
     "snoostorm": "0.0.5",
-    "snoowrap": "^1.15.2"
+    "snoowrap": "^1.15.2",
+    "typescript": "^3.6.3"
   }
 }
