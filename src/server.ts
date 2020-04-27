@@ -33,15 +33,19 @@ comments.on("comment", (comment: any) => {
     let result = sentiment.analyze(comment.body, null, null);
     let metric = result.score + result.comparative;
     let wordCount = result.tokens.length;
-    if (metric < metricThreshold && wordCount < wordCountThreshold) {
-        let randomIndex = Math.floor(Math.random() * replies.length);
-        let reply = replies[randomIndex];
-        console.log("\nReplying to: \"" + comment.body + "\"\nwith: \"" + reply + "\"\n");
-        comment.reply(reply + "\n"
-                      + "\n" + "_chill out, bro. I'm a bot. | "
-                      + "[source code](https://github.com/scorpion9979/nihilistic-reddit-bot)_")
-               .catch(function(err: Error) {
-                   console.log("\nCaught error: " + err.message + "\nHang tight!");
-                });
+    try {
+        if (metric < metricThreshold && wordCount < wordCountThreshold) {
+            let randomIndex = Math.floor(Math.random() * replies.length);
+            let reply = replies[randomIndex];
+            console.log("\nReplying to: \"" + comment.body + "\"\nwith: \"" + reply + "\"\n");
+            comment.reply(reply + "\n"
+                          + "\n" + "_chill out, bro. I'm a bot. | "
+                          + "[source code](https://github.com/scorpion9979/nihilistic-reddit-bot)_")
+                   .catch(function(err: Error) {
+                       console.log("\nCaught error: " + err.message + "\nHang tight!");
+                    });
+        }
+    } catch(e) {
+        console.log("\nCaught error: \n" + e.message);
     }
 });
