@@ -38,7 +38,7 @@ comments.on("comment", (comment: any) => {
         let reply = replies[randomIndex];
         console.log("\nReplying to: \"" + comment.body + "\"\nwith: \"" + reply + "\"\n");
         comment.reply(reply + "\n"
-                      + "\n" + "_I'm a bot created by \\/u/scorpion9979 | "
+                      + "\n" + "_chill out, bro. I'm a bot. | "
                       + "[source code](https://github.com/scorpion9979/nihilistic-reddit-bot)_")
                .catch(function(err: Error) {
                    console.log("\nCaught error: " + err.message + "\nHang tight!");
